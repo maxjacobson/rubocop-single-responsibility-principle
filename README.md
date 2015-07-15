@@ -18,40 +18,13 @@ $ bundle
 
 ## Usage
 
-**Note**: Thanks to [nevir/rubocop-rspec][], which I copied a lot from,
-including this section.
-
-[nevir/rubocop-rspec]: https://github.com/nevir/rubocop-rspec
-
-You need to tell RuboCop to load the extension. There are three ways to do
-this:
-
-### RuboCop configuration file
-
-Put this into you `.rubocop.yml`.
+Put this into your `.rubocop.yml`.
 
 ```
-require: rubocop-single-responsibility-principle
+require: "rubo_cop/single_responsibility_principle"
 ```
 
-Now you can run `rubocop` and it will automaticly load the RuboCop RSpec
-cops together with the standard cops.
-
-### Command line
-
-```bash
-rubocop --require rubocop-single-responsibility-principle
-```
-
-### Rake task
-
-```ruby
-RuboCop::RakeTask.new do |task|
-  task.requires << 'rubocop-single-responsibility-principle'
-end
-```
-
-And then just run Rubocop like normal, and it should include this custom cop.
+And then just run RuboCop like normal, and it should include this custom cop.
 
 ## Development
 
