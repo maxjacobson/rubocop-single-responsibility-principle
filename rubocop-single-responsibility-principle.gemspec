@@ -1,16 +1,17 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rubo_cop/single_responsibility_principle/version'
+require "rubo_cop/single_responsibility_principle/version"
 
+# rubocop:disable Metrics/LineLength
 Gem::Specification.new do |spec|
   spec.name          = "rubocop-single-responsibility-principle"
   spec.version       = RuboCop::SingleResponsibilityPrinciple::VERSION
   spec.authors       = ["Max Jacobson"]
   spec.email         = ["max@hardscrabble.net"]
 
-  spec.summary       = %q{Enforcer of single responsibility principle}
-  spec.description   = %q{This is a probably-facetious RuboCop extension which requires all Ruby classes to have only one public interface.}
+  spec.summary       = "Enforcer of single responsibility principle"
+  spec.description   = "This is a probably-facetious RuboCop extension which requires all Ruby classes to have only one public interface."
   spec.homepage      = "https://github.com/maxjacobson/rubocop-single-responsibility-principle"
   spec.license       = "MIT"
 
